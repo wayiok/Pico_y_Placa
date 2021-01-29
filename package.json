@@ -1,0 +1,23 @@
+{
+  "name": "Pico_y_Placa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "action.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wayiok/Pico_y_Placa.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wayiok/Pico_y_Placa/issues"
+  },
+  "homepage": "https://github.com/wayiok/Pico_y_Placa#readme",
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}
