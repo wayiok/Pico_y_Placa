@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>PICO Y PLACA</title>
+    <script type="text/javascript"  src="action.js" ></script>
+  </head>
+  <body>
+  	<H1> PICO Y PLACA</H1>
+    
+  	<form name="plateForm" onsubmit="return validateForm()" method="POST">
+
+  		<label for="licensePlate" > License Plate Number: </label>
+  		<input type="text" id="licensePlate" name="licensePlate" placeholder="AAA-0000" pattern="[A-Z]{3}-[0-9]{4}" required="True"><br>
+
+  		<label for="drivingDate"> Date:</label>
+  		<input type="date" id="drivingDate" name="drivingDate" required="True"><br>
+
+  		<label for="drivingHour"> Hour:</label>
+  		<input type="time" id="drivingHour" name="drivingHour" required="True"><br>
+
+  		<input type="submit" value="VALIDATE">
+
+  	</form>
+
+  </body>
+</html>
