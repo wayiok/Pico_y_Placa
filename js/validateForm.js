@@ -9,13 +9,12 @@ THIS CODE WAS MADE FOR THE RESTRICTIONS IN 2019
 	WEDNESDAY PLATES ENDED IN 5 AND 6 CANNOT DRIVE DURING RESTRICTED HOURS
 	THURSDAY PLATES ENDED IN 7 AND 8 CANNOT DRIVE DURING RESTRICTED HOURS
 	FRIDAY PLATES ENDED IN 9 AND 0 CANNOT DRIVE DURING RESTRICTED HOURS
+
 */
 
 
 let errorMessDay = 'Your vehicle CANNOT DRIVE during the time consulted'
 let successMess = 'There are NO RESTRICTINS for your vehicle. You can drive.'
-
-
 
 class plate {
 
@@ -55,8 +54,8 @@ class datetime {
 	}
 }
 
-function validateForm() {
-
+function validateForm(hour,weekDay,plateDigit,weekDayName) 
+{
 	const plateConsulted = new plate(licensePlate.value.toString())
 	const timeConsulted = new datetime(drivingDate.value.toString(),drivingHour.value)
 
@@ -65,8 +64,53 @@ function validateForm() {
 	plateDigit = plateConsulted.getPlateLastNumber() 
 	weekDayName = timeConsulted.getweekDayName()
 
-	alert('DATOS:'+ hour + weekDay +plateDigit + weekDayName)					
+	weekDayName == 'Sunday' || weekDayName == 'Saturday' ? alert(successMess) : 
+				isHourRestrictionsFree(hour) ? alert(successMess) :
+					isPlateDigitAffected(weekDayName,plateDigit) ? alert(errorMessDay) : alert(successMess) 
+							
 }
+
+
+function isHourRestrictionsFree(hour) {
+
+	hourMinutes = (hour.substring(0,2) * 60) + parseInt(hour.substring(3,5))
+	
+	if( hourMinutes >= 420 && 570 >= hourMinutes ||  hourMinutes >= 960 && 1170 >= hourMinutes ) {
+		return false
+	} else {
+		return true
+	}
+
+}
+
+
+function isPlateDigitAffected(day,digit) {
+
+	switch (day) {
+		case 'Monday':
+			if (digit == 1 || digit == 2) { return true } 
+			break;
+		case 'Tuesday':
+			if (digit == 3 || digit == 4) { return true } 
+			break;
+		case 'Wednesday':
+			if (digit == 5 || digit == 6) { return true }  
+			break;
+		case 'Thursday':
+			if (digit == 7 || digit == 8) { return true } 
+			break;
+		case 'Friday':
+			if (digit == 9 || digit == 0) { return true }  
+			break;			
+	}
+
+	return false
+
+}
+
+
+
+
 
 
 

@@ -3,12 +3,12 @@
 <html>
   <head>
     <title>PICO Y PLACA</title>
-    <script src="js/action.js" ></script>
+    <script type="text/javascript" src="js/validateForm.js" ></script>
   </head>
   <body>
   	<H1> PICO Y PLACA</H1>
     
-  	<form name="plateForm" onsubmit="return validateForm()" method="POST">
+  	<form name="plateForm" onsubmit="return validateForm()">
 
   		<label for="licensePlate" > License Plate Number: </label>
   		<input type="text" id="licensePlate" name="licensePlate" placeholder="AAA-0000" pattern="[A-Z]{3}-[0-9]{4}" required="True"><br>
