@@ -8,7 +8,14 @@ THIS CODE WAS MADE FOR THE RESTRICTIONS IN 2019
 	TUESDAY PLATES ENDED IN 3 AND 4 CANNOT DRIVE DURING RESTRICTED HOURS
 	WEDNESDAY PLATES ENDED IN 5 AND 6 CANNOT DRIVE DURING RESTRICTED HOURS
 	THURSDAY PLATES ENDED IN 7 AND 8 CANNOT DRIVE DURING RESTRICTED HOURS
+	FRIDAY PLATES ENDED IN 9 AND 0 CANNOT DRIVE DURING RESTRICTED HOURS
 */
+
+
+let errorMessDay = 'Your vehicle CANNOT DRIVE during the time consulted'
+let successMess = 'There are NO RESTRICTINS for your vehicle. You can drive.'
+
+
 
 class plate {
 
@@ -60,10 +67,6 @@ function validateForm() {
 
 	alert('DATOS:'+ hour + weekDay +plateDigit + weekDayName)					
 }
-
-module.exports = validateForm
-
-
 
 
 
