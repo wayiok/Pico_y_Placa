@@ -3,15 +3,16 @@
 <html>
   <head>
     <title>PICO Y PLACA</title>
+    <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="js/validateForm.js" ></script>
   </head>
   <body>
-  	<H1> PICO Y PLACA</H1>
+  	<H1> PICO Y PLACA PREDICTOR</H1>
     
   	<form name="plateForm" onsubmit="return validateForm()">
 
   		<label for="licensePlate" > License Plate Number: </label>
-  		<input type="text" id="licensePlate" name="licensePlate" placeholder="AAA-0000" pattern="[A-Z]{3}-[0-9]{4}" required="True"><br>
+  		<input class="center-block" type="text" id="licensePlate" name="licensePlate" placeholder="AAA-0000" pattern="[A-Z]{3}-[0-9]{4}" required="True"><br>
 
   		<label for="drivingDate"> Date:</label>
   		<input type="date" id="drivingDate" name="drivingDate" required="True"><br>
